@@ -5,8 +5,7 @@ function RevPShell
     Nishang script which can be used for Reverse or Bind interactive PowerShell from a target. 
 
     .DESCRIPTION
-    This script is a light-weight version of the Nishang PowerShellTcp script desiged to bypass Windows Defender
-    Link to original: https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1 
+    This script is a light-weight version of the NishangProject PowerShellTcp script desiged to bypass Windows Defender
     #>
 
     [CmdletBinding(DefaultParameterSetName="reverse")] Param(
