@@ -1,3 +1,4 @@
+# Match with your resource names
 $resourceGroup = ' '
 $vmName = ' '
 $storageName = ' '
